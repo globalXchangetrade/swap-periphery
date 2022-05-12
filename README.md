@@ -50,11 +50,11 @@ The difference is that there is always a slipage when you make a trade, so you c
 
 `swapExactTokensForTokens` will take a fixed amount of tokens from you and will give you some tokens in return. 
 
-*Example : There is an TESLA/STIR pool, price of tesla is 150 USD and price of STIR is 1 USD. There is a user who has 100 STIR and wants to convert all 100 STIR into TESLA Tokens. Then he will use `swapExactTokensForTokens`
+* Example : There is an TESLA/STIR pool, price of tesla is 150 USD and price of STIR is 1 USD. There is a user who has 100 STIR and wants to convert all 100 STIR into TESLA Tokens. Then he will use `swapExactTokensForTokens`
 
 `swapTokensForExactTokens` will take a unfixed amount of tokens from you and will give you fixed amount of tokens.
 
-*Example : There is an TESLA/STIR pool, price of tesla is 150 USD and price of STIR is 1 USD. There is a user who has 100 STIR, but he wants exactly 1 TESLA token. Then he will use `swapTokensForExactTokens`
+* Example : There is an TESLA/STIR pool, price of tesla is 150 USD and price of STIR is 1 USD. There is a user who has 100 STIR, but he wants exactly 1 TESLA token. Then he will use `swapTokensForExactTokens`
 
 #### swapExactTokensForTokens
 
