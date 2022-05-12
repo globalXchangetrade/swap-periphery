@@ -61,37 +61,37 @@ Example : There is an TESLA/STIR pool, price of tesla is 150 USD and price of ST
 
 #### swapExactTokensForTokens
 
-function swapExactTokensForTokens(
-  uint amountIn,
+`function swapExactTokensForTokens(
+uint amountIn,
   uint amountOutMin,
   address[] calldata path,
   address to,
   uint deadline
-) external returns (uint[] memory amounts);
+) external returns (uint[] memory amounts);`
 
-amountIn : The amount of input tokens to send.
+* amountIn : The amount of input tokens to send.
 (If user wants to convert exactly 100 STIR to Tesla, amountIn will be 100 STIR Token)
-amountOutMin : The minimum amount of output tokens that must be received for the transaction not to revert.
-path : An array of token addresses. path.length must be >= 2. Pools for each consecutive pair of addresses must exist and have liquidity.
+* amountOutMin : The minimum amount of output tokens that must be received for the transaction not to revert.
+* path : An array of token addresses. path.length must be >= 2. Pools for each consecutive pair of addresses must exist and have liquidity.
 (In This case the path would be `['STIR token Address', 'TESLA token Address']`)
-to : Recipient of the output tokens.
-deadline : Unix timestamp after which the transaction will revert.
+* to : Recipient of the output tokens.
+* deadline : Unix timestamp after which the transaction will revert.
 
 
 #### swapTokensForExactTokens
 
-function swapTokensForExactTokens(
+`function swapTokensForExactTokens(
   uint amountOut,
   uint amountInMax,
   address[] calldata path,
   address to,
   uint deadline
-)  external returns (uint[] memory amounts);
+)  external returns (uint[] memory amounts);`
 
-amountOut: The amount of output tokens to receive.
+* amountOut: The amount of output tokens to receive.
 (If user wants to convert STIR and recieve exactly 1 TESLA token, amountOut will be 1 TESLA token)
-amountInMax: The maximum amount of input tokens that can be required before the transaction reverts.
-path : An array of token addresses. path.length must be >= 2. Pools for each consecutive pair of addresses must exist and have liquidity.
+* amountInMax: The maximum amount of input tokens that can be required before the transaction reverts.
+* path : An array of token addresses. path.length must be >= 2. Pools for each consecutive pair of addresses must exist and have liquidity.
 (In This case the path would be `['STIR token Address', 'TESLA token Address']`)
-to : Recipient of the output tokens.
-deadline : Unix timestamp after which the transaction will revert.
+* to : Recipient of the output tokens.
+* deadline : Unix timestamp after which the transaction will revert.
