@@ -43,12 +43,18 @@ Mintable Mock STIR: https://mumbai.polygonscan.com/address/0x4039f5f14f1530bdeda
 
 The Router contract is the main contract via which you can swap tokens, add liquidity and perform all the functions. 
 
-Swap Functionality 
-`event Swap(
-  address indexed sender,
-  uint amount0In,
-  uint amount1In,
-  uint amount0Out,
-  uint amount1Out,
-  address indexed to
-);`
+### Swap Functionality 
+
+There are two functions to do a swap, 
+
+function 1 is `swapExactTokensForTokens` and function 2 is `swapTokensForExactTokens`
+
+The difference is that there is always a slipage when you make a trade, so you can not exactly calculate how many tokens you will get for a fixed amount.
+
+`swapExactTokensForTokens` will take a fixed amount of tokens from you and will give you some tokens in return. 
+
+Example : There is an TESLA/STIR pool, price of tesla is 150 USD and price of STIR is 1 USD. There is a user who has 100 STIR and wants to convert all 100 STIR into TESLA Tokens. Then he will use `swapExactTokensForTokens`
+
+`swapTokensForExactTokens` will take a unfixed amount of tokens from you and will give you fixed amount of tokens.
+
+Example : There is an TESLA/STIR pool, price of tesla is 150 USD and price of STIR is 1 USD. There is a user who has 100 STIR, but he wants exactly 1 TESLA token. Then he will use `swapTokensForExactTokens`
