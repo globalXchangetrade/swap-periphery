@@ -92,3 +92,6 @@ uint amountIn,
 (In This case the path would be `['STIR token Address', 'TESLA token Address']`)
 * to : Recipient of the output tokens.
 * deadline : Unix timestamp after which the transaction will revert.
+
+## Note :
+In the case when you are swapping tokens which do not have a common liquidity pool (example: TESLA and GOLD). Then you can use the above functions and define the path as `['TESLA token Address', 'STIR token Address', 'Gold Token Address']`
