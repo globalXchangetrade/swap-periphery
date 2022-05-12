@@ -13,12 +13,28 @@ The following assumes the use of `node@>=10`.
 
 ## Install Dependencies
 
-`yarn`
+`npm i`
 
 ## Compile Contracts
 
-`yarn compile`
+`truffle compile`
 
-## Run Tests
+## Deployed Contracts
 
-`yarn test`
+Contracts have been deployed on BSC Testnet and Polygon Mumbai Testnet 
+
+# BSC
+
+GlobalXRouter: https://testnet.bscscan.com/address/0x2561448Acc10A42Ee0aa0A1D5c0f84E14C9e407F
+GlobalXFactory: https://testnet.bscscan.com/address/0x2e05a84d53ab9fc1c4377d3dfb5715a0368a4187
+
+Mintable Mock STIR: https://testnet.bscscan.com/address/0xee1fb970faf38647289900d2b990685beff45d69
+
+# Polygon
+
+GlobalXRouter: https://mumbai.polygonscan.com/address/0x0ad86c981880d7d70a747f457f8c2bc3910de2bc
+GlobalXFactory: https://mumbai.polygonscan.com/address/0x1ce04cded1a8f9b21bc8d880a5a05a8d869e3b7f
+
+Mintable Mock STIR: https://mumbai.polygonscan.com/address/0x4039f5f14f1530bdeda410bdf7eee10ac47a7389
+
+## How to Interact with contracts 
