@@ -58,3 +58,40 @@ Example : There is an TESLA/STIR pool, price of tesla is 150 USD and price of ST
 `swapTokensForExactTokens` will take a unfixed amount of tokens from you and will give you fixed amount of tokens.
 
 Example : There is an TESLA/STIR pool, price of tesla is 150 USD and price of STIR is 1 USD. There is a user who has 100 STIR, but he wants exactly 1 TESLA token. Then he will use `swapTokensForExactTokens`
+
+#### swapExactTokensForTokens
+
+function swapExactTokensForTokens(
+  uint amountIn,
+  uint amountOutMin,
+  address[] calldata path,
+  address to,
+  uint deadline
+) external returns (uint[] memory amounts);
+
+amountIn : The amount of input tokens to send.
+(If user wants to convert exactly 100 STIR to Tesla, amountIn will be 100 STIR Token)
+amountOutMin : The minimum amount of output tokens that must be received for the transaction not to revert.
+path : An array of token addresses. path.length must be >= 2. Pools for each consecutive pair of addresses must exist and have liquidity.
+(In This case the path would be `['STIR token Address', 'TESLA token Address']`)
+to : Recipient of the output tokens.
+deadline : Unix timestamp after which the transaction will revert.
+
+
+#### swapTokensForExactTokens
+
+function swapTokensForExactTokens(
+  uint amountOut,
+  uint amountInMax,
+  address[] calldata path,
+  address to,
+  uint deadline
+)  external returns (uint[] memory amounts);
+
+amountOut: The amount of output tokens to receive.
+(If user wants to convert STIR and recieve exactly 1 TESLA token, amountOut will be 1 TESLA token)
+amountInMax: The maximum amount of input tokens that can be required before the transaction reverts.
+path : An array of token addresses. path.length must be >= 2. Pools for each consecutive pair of addresses must exist and have liquidity.
+(In This case the path would be `['STIR token Address', 'TESLA token Address']`)
+to : Recipient of the output tokens.
+deadline : Unix timestamp after which the transaction will revert.
