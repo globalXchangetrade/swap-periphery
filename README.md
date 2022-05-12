@@ -40,3 +40,15 @@ GlobalXFactory: https://mumbai.polygonscan.com/address/0x1ce04cded1a8f9b21bc8d88
 Mintable Mock STIR: https://mumbai.polygonscan.com/address/0x4039f5f14f1530bdeda410bdf7eee10ac47a7389
 
 ## How to Interact with contracts 
+
+The Router contract is the main contract via which you can swap tokens, add liquidity and perform all the functions. 
+
+Swap Functionality 
+`event Swap(
+  address indexed sender,
+  uint amount0In,
+  uint amount1In,
+  uint amount0Out,
+  uint amount1Out,
+  address indexed to
+);`
